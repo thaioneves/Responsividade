@@ -69,3 +69,47 @@ header p{
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+nav{
+    background-color: #1e3a8a;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.menu-mobile{
+    display: none;
+    background-color: #1e3a8a;
+}
+.menu-mobile a{
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #1d4ed8;
+}
+.hamburguer{
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+}
+#origem-click{
+    display: none;
+}
+@media(max-width:769px){
+    .links{
+        display: none;
+    }
+    .hamburguer{
+        display: block;
+    }
+    #origem-click:checked ~ .menu-mobile{
+        display: block;
+    }
+}
